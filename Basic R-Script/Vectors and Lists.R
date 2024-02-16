@@ -1,10 +1,10 @@
 #Data types 
-
-#Numeric
-#Integer(23L)
-#Complex(23+4i)
-#Character("LPU")
-#Logical(TRUE, FALSE)
+                    Precedence
+#Numeric               4th
+#Integer(23L)          3rd
+#Complex(23+4i)        2nd
+#Character("LPU")      1st
+#Logical(TRUE, FALSE)  5th
 
 
 a<-c(2,3,5,6)   #c represents vector
