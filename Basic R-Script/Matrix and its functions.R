@@ -2,7 +2,7 @@
 #Matrix is a 2-dimentional data structure
 #Elements arranged in rows and columns
 #Martix is created by matrix()
-#Type of element can ce integer, character, numeric
+#Type of element can be integer, character, numeric
 #take input in c()
 
 mat1<-matrix(c(1:6))
