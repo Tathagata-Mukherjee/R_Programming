@@ -51,7 +51,12 @@ f5
 #2nd argument - repetition
 #3rd argument - labels
 
-#Access 1st, 4th and 5th element of f3
-#Delete 3rd and 5th element of f3
+# Access 1st, 4th, and 5th elements of f3
+elements_to_access <- f3[c(1, 4, 5)]
+print(elements_to_access)
 
+# Delete 3rd and 5th elements of f3
+f3 <- f3[-c(3, 5)]
+print(f3)
 
+#exclude() #remove any levels you want
