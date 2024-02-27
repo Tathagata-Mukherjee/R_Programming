@@ -47,3 +47,17 @@ if(num<0)
   print("Its a positive number")
 }
 }
+
+#OR
+
+{
+  num<-as.numeric(readline("Enter a number \n"))
+  if(num<0)
+  {
+    paste(num,"<- Its a negative number")
+  }else
+  {
+    paste(num,"<- Its a positive number")
+  }
+}
+
