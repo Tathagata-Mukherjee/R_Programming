@@ -44,7 +44,7 @@ temp1
 
 #Naming list   
 a1<-list(c(1,2,3),c('X','Y','Z'),c('Delhi','Kolkata','Mumbai'))
-names(a1)<-c('!st','2nd','3rd')
+names(a1)<-c('1st','2nd','3rd')
 a1
 
 #Accessing elements by naming
