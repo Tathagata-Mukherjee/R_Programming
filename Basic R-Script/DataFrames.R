@@ -44,5 +44,5 @@ a1<-rbind(d,r1)
 a1
 
 Grade<-c('O','A','A+','B+')
-a2<-cbind(a1,Grade=Grade)
+a2<-cbind(a1,Grade)
 a2
