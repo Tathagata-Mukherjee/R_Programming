@@ -25,3 +25,16 @@ z                                 #Prints NULL as no value in 8th index
 #Type 2: Based on matching values
 #switch(expression as character,case1,case2,...,caseN)
 
+#Example1
+z1<-'4'
+z2<-switch(z1,'4'='Dhoni', '6'='Sachin', '12'='Saurabh')
+print(z2)
+
+#Example2
+ax=1
+bx=3
+e<-switch(ax+bx, 'a', 'b', 'c', 'd')
+e                                    #Output 'd' as 1+3=4th index
+
+
+#Program on calculator by using matching values with switch statement
