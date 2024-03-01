@@ -21,3 +21,10 @@ for(b in seq(11,20)){
   print(rep(b,2))
 }
 
+# -----------------------
+
+v2<-c('Welcome','to','R','Programming')
+v2
+for(j in rep(v2,every=3)){
+  print(j)
+}
