@@ -38,3 +38,24 @@ e                                    #Output 'd' as 1+3=4th index
 
 
 #Program on calculator by using matching values with switch statement
+
+{
+num1<-as.numeric(readline("Enter First Number \n"))
+num2<-as.numeric(readline("Enter Second Number \n"))
+print("Enter +,-,*,/ to perform the respective operation")
+oper<-readline("Enter Arithmetic Operation to perform \n")
+output<-switch(oper, '+'=num1+num2, '-'=num1-num2, '*'=num3*num2, '/'=num3/num2)
+output
+}
+
+#OR
+
+{
+  num1<-as.numeric(readline("Enter First Number \n"))
+  num2<-as.numeric(readline("Enter Second Number \n"))
+  print("Enter 1,2,3,4 for +,-,*,/ to perform the respective operation")
+  oper<-as.numeric(readline("Enter Arithmetic Operation to perform \n"))
+  output<-switch(oper, '1'=num1+num2, '2'=num1-num2, '3'=num3*num2, '4'=num3/num2)
+  paste("Output of two numbers is:", output)
+}
+
