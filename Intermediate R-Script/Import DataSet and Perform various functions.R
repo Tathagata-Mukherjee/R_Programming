@@ -34,3 +34,6 @@ tail(a1)         #By default it displays 6 rows from the last
 
 a3<-tail(a1,20)  #Retrieve last 20 rows
 a3
+
+#Retrieve 1st 20 rows by indexing
+a1[1:20, ]
