@@ -37,3 +37,25 @@ a3
 
 #Retrieve 1st 20 rows by indexing
 a1[1:20, ]
+
+#Find insulin and blood pressure of 1 to 20 patients
+a1[1:20,c(3,5)]
+
+#Find max insulin
+max(a1$Insulin)
+
+#Find average of blood pressure
+mean(a1$BloodPressure)
+
+#Find range of glucose
+range(a1$Glucose)
+
+#Find the record of maximum age patient ...subset()
+subset(a1,Age==max(Age))
+
+#Find the record of patient whose bloodPressure is greater than 150
+subset(a1,BloodPressure>100)
+
+#Find the record of patient whose bloodPressure is greater than 150 and age>10
+subset(a1,BloodPressure>100 & Age>50)
+nrow(subset(a1,BloodPressure>100 & Age>50))     #Display no. of rows that match he condition
