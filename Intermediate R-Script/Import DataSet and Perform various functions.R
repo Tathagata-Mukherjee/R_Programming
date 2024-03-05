@@ -56,6 +56,6 @@ subset(a1,Age==max(Age))
 #Find the record of patient whose bloodPressure is greater than 150
 subset(a1,BloodPressure>100)
 
-#Find the record of patient whose bloodPressure is greater than 150 and age>10
+#Find the record of patient whose bloodPressure is greater than 150 and age>50
 subset(a1,BloodPressure>100 & Age>50)
 nrow(subset(a1,BloodPressure>100 & Age>50))     #Display no. of rows that match he condition
