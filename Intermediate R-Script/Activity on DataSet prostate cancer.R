@@ -44,8 +44,30 @@ nrow(subset(activity, area<600))   #Display the number of row return from the co
 nrow(subset(activity, diagnosis_result == 'M'))
 
 #10.find the range value of smoothness
+
+range(activity$smoothness)
+
 #11.find compactness and symmetry less than 0.158
+
+subset(activity,compactness<0.158 & symmetry<0.158)
+
 #12.add area and radius and make column new_dim.
+
+activity$new_dim <- activity$area + activity$radius
+activity
+
 #13.find the position of column texture and symmetry.
-#14. retrive last 20 ids.
-#15. change the radius of 1 to 10 id  by 100 and find mean use fix()
+
+grep("texture", colnames(activity))
+grep("symmetry", colnames(activity))
+
+#14.Retrieve last 20 ids.
+
+tail(activity,20)
+
+#15.Change the radius of 1 to 10 id  by 100 and find mean use fix()
+
+activity$radius[activity$id >= 1 & activity$id <= 10] <- 100
+activity
+fix(activity)    #open a new window where you can manually fix the values
+mean(activity$radius)
