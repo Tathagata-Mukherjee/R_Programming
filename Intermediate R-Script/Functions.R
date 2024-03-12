@@ -35,4 +35,50 @@ f4<-function(x=10,y,z){
   cat("Product =", res)
 }
 
-f4( ,2,5)
+f4(,2,5)               #Leave the value of the variable empty when calling if it is already defined
+                       #If the values will be given during calling then the values will be overwrite
+
+#Loop inside Function
+#Square of first 5 numbers
+f5<-function(){
+  for(i in 1:5){
+    cat(i^2,' ')
+  }
+}
+
+f5()
+
+
+#Find the square root of 1 to 10 by function
+f6<-function(){
+  for(i in 1:10){
+    cat("Square Root of",i,"is",i^(1/2),"\n")
+  }
+}
+
+f6()
+
+
+#Find the volume of cube by taking input from user
+f7<-function(x){
+  store<-x^3
+  cat("Volume of cube with side =",x,"is",store)
+  }
+{
+x<-as.numeric(readline("Input a number"))
+f7(x)
+}
+
+
+#Inbuilt math function
+#absolute()
+abs(-10)           #Returns absolute value removing positive or negative
+sqrt(16)           #Returns square root
+ceiling(-10.9)     #Returns the round up highest value 
+floor(10.8)        #Returns the round up smallest value
+trunc(10.1)        #Returns only the actual value removing decimal
+#Trigonomeric functions
+log(2)
+sin(45)
+tan(45)            #Value taken as radian
+tan(45*pi/180)     #Convert radian to degree #(value*pi/180)
