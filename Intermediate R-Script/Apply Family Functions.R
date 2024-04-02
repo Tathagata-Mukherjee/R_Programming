@@ -10,7 +10,10 @@ m1<-matrix(c(1:12),nrow=3,ncol=4,byrow=TRUE)
 m1
 apply(m1,1,sum)
 apply(m1,2,sum)
-class(apply(m1,2,sum))
+class(apply(m1,2,sum))    #integer
 
 d1<-data.frame(RollNo=c(12,16,14,8), Marks=c(30,28,46,99))
 d1
+#apply(d1,2,max)   #Giving output of max values in both column
+apply(d1[2],2,max)
+class(apply(d1[2],2,max))   #numeric
