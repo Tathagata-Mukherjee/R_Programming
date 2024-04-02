@@ -48,3 +48,23 @@ m2<-matrix(c(12:24),nrow=6,ncol=6)
 #   y^2
 # }
 apply(m2,1,sqrt)
+
+#sapply
+#input - vector,list
+#output - by default same as input
+#Syntax - sapply(input,function)
+
+a1<-c(6,9,26,25)
+class(a1)
+sapply(a1,min)
+class(sapply(a1,min))
+
+
+#tapply()
+#used for compute statistical analysis
+#create a subset of a vector and then apply function to each of subset
+#Syntax - sapply(input,index,function)
+
+sal<-c(234,456,200,300,520,680)
+emp<-c('F','M','M','F','M','F')
+tapply(sal,emp,max)
