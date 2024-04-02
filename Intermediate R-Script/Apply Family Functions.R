@@ -68,3 +68,18 @@ class(sapply(a1,min))
 sal<-c(234,456,200,300,520,680)
 emp<-c('F','M','M','F','M','F')
 tapply(sal,emp,max)
+
+#Find the employees in all department working in Wipro,TCS
+#IT - 5
+#Security - 3
+#Management - 7
+#Management - 9
+#Security - 2
+#Marketing - 5
+#IT - 5
+#Marketing - 2
+
+dept<-c("IT","Security","Management","Marketing","IT","Security","Management","Marketing")
+emp_count<-c(5,3,7,5,5,2,9,2)
+tapply(wipro, dept, sum)
+
