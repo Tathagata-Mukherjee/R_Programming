@@ -81,5 +81,7 @@ tapply(sal,emp,max)
 
 dept<-c("IT","Security","Management","Marketing","IT","Security","Management","Marketing")
 emp_count<-c(5,3,7,5,5,2,9,2)
-tapply(wipro, dept, sum)
+s<-tapply(wipro, dept, sum)
+s
+paste("Total Manpower =", sum(s))
 
