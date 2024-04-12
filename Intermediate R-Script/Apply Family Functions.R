@@ -63,7 +63,7 @@ class(sapply(a1,min))
 #tapply()
 #used for compute statistical analysis
 #create a subset of a vector and then apply function to each of subset
-#Syntax - sapply(input,index,function)
+#Syntax - tapply(input,index,function)
 
 sal<-c(234,456,200,300,520,680)
 emp<-c('F','M','M','F','M','F')
