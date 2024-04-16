@@ -1,9 +1,9 @@
 #Apply Family Functions
 #apply(), lapply(), sapply(), tapply()
 #apply() <- implement aggregation on rows and columns
-#input - matrix, array, dataframe
-#output - vector
-#syntax - apply(input,margin,function)
+#Input - matrix, array, dataframe
+#Output - vector
+#Syntax - apply(input,margin,function)
 #margin can be 1 or 2. 1 for row, 2 for column
 
 m1<-matrix(c(1:12),nrow=3,ncol=4,byrow=TRUE)
