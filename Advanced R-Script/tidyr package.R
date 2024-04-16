@@ -7,4 +7,20 @@ a<-read_excel(file.choose())
 View(a)
 
 #gather(input,key,value)
-#used for changing columns into rows
+#used for changing columns into rows, wide to long
+a1<-gather(a,key=features,value=data,mpg:disp)
+a1
+
+#spread() 
+#long to wide, rows into columns
+a2<-spread(a1,features,data)
+a2
+
+#separate()
+a3<-separate(a,col=production,into=c("Production","Year"))
+a3
+
+#unite()
+#merge two columns into one
+a4<-unite(a3,col="cyl-mpg",c("cyl","mpg"),sep='-')
+a4
