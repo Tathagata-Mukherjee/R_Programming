@@ -6,6 +6,7 @@ d1=data.frame(name=c('a','b','c','d'),
 d1
 
 library(dplyr)
+
 #functions related to variables(columns)
 select(d1,starts_with('s'))
 select(d1,starts_with('ag'))
