@@ -24,3 +24,16 @@ a3
 #merge two columns into one
 a4<-unite(a3,col="cyl-mpg",c("cyl","mpg"),sep='-')
 a4
+
+#nest()
+#creates a list-column of dataframe
+a5<-nest(a,key=c("mpg"))
+a5
+
+#import built-in dataset iris
+#apply gather and unite on any variable
+
+library(datasets)
+data("iris")
+View(iris)
+
