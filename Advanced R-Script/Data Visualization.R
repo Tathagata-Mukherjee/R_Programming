@@ -41,7 +41,6 @@ barplot(d3$Marks,names.arg=d3$Name,xlab="Names",ylab="Marks",main="Student Data"
 
 
 
-
 #Scatter Plot
 #Used for Comparing Variables
 #plot(x,y,xlab,ylab,xlim,ylim,main)
@@ -54,4 +53,15 @@ plot(x=mtcars$wt,y=mtcars$mpg,xlab="Weight",ylab="Mileage",xlim=c(2.5,5),ylim=c(
 
 
 
+#Line Graph
+#plot(x,type='p'/'l'/'o',xlab,ylab,main,col)   #p - only dot, o - both line and dot, l - only line
+temp<-c(35,23,44,16,18,26)
+#months<-c("JAN","FEB","MAR","APR","MAY","JUN")
+plot(temp,type='l',xlab="Months",ylab="Temperature in Celcius",main="Temperature in Jan-July",col='blue')
 
+#MultiLine Graph
+temp1<-c(45,23,13,24,31,21)
+lines(temp1,type='l',col='purple')
+
+
+install.packages("flexdashboard")
