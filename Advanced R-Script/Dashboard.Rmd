@@ -1,0 +1,48 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+s1<-data.frame(Name=c("Akash","Joydeep","Tanish","Tathagata","Subranil"),Marks=c(55,78,41,99,67))
+
+library(sqldf)
+s2<-sqldf("SELECT * FROM s1 ORDER BY Marks DESC")
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+library(graphics)
+barplot(s2$Marks,names.arg=s2$Name,xlab="Marks",ylab="Names",main="Marks of Students",col='orange',border='red')
+
+
+
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
