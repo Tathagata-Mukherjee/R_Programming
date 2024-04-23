@@ -31,8 +31,27 @@ revenue<-c(78,21,45,65,32)
 l<-c("JAN","FEB","MAR","APR","MAY")
 barplot(revenue,names.arg=l,xlab="Months",ylab="Revenue",main="Revenue Bar Chart",col='orange',border='red')
 
+
+#
 d2<-data.frame(RollNo=c(1:5),Name=c("Messi","Ronaldo","Neymar","Rooney","Pele"),Marks=c(77,89,65,67,71))
 d2
 library(sqldf)
-d3<-sqldf("SELECT * FROM d2 ORDER BY Marks")
+d3<-sqldf("SELECT * FROM d2 ORDER BY Marks DESC")
 barplot(d3$Marks,names.arg=d3$Name,xlab="Names",ylab="Marks",main="Student Data",col='skyblue',border='purple')
+
+
+
+
+#Scatter Plot
+#Used for Comparing Variables
+#plot(x,y,xlab,ylab,xlim,ylim,main)
+
+library(datasets)
+data("mtcars")
+View(mtcars)
+plot(x=mtcars$wt,y=mtcars$mpg,xlab="Weight",ylab="Mileage",xlim=c(2.5,5),ylim=c(15,20),
+     main="Weight v/s Mileage",col='red')
+
+
+
+
