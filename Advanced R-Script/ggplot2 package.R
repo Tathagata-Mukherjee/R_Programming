@@ -50,3 +50,18 @@ heatmap(d,Rowv = NA,Colv = NA,scale="column")
 
 #coloring by color palette
 heatmap(d,Rowv = NA,Colv = NA,scale="column",col=cm.colors(256),xlab = "Variables",ylab = "Cars",main = "HeatMap")
+
+
+data("trees")
+trees
+
+#Find the length and volume of 10 girth using dplyr package and plot scatter by ggplot
+
+trees%>%
+  select(Height,Volume)%>%
+  filter(trees$Girth > 10)
+
+q<-ggplot(trees,aes(x=Height,y=Volume)) 
+q
+
+q+geom_point()
