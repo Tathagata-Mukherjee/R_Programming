@@ -28,6 +28,25 @@ p+geom_point()+facet_wrap(~Species)+geom_smooth(method="lm")
 
 p+geom_point()+facet_wrap(~Species)+geom_smooth(method="lm")+coord_cartesian(xlim=c(4,8),ylim=c(2,5))
 
-#layer7 - 
+#layer7  
 
 p+geom_point()+facet_wrap(~Species)+geom_smooth(method="lm")+coord_cartesian(xlim=c(4,8),ylim=c(2,5))+theme(axis.text=element_text(color="red"))
+
+
+
+#heatmap
+#created by heatmap()
+#accept input as matrix
+
+mtcars
+d<-as.matrix(mtcars)
+d
+
+#normalizing the matrix by scaling function
+heatmap(d,scale="column")
+
+#remove dendogram
+heatmap(d,Rowv = NA,Colv = NA,scale="column")
+
+#coloring by color palette
+heatmap(d,Rowv = NA,Colv = NA,scale="column",col=cm.colors(256),xlab = "Variables",ylab = "Cars",main = "HeatMap")
