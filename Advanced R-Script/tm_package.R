@@ -48,3 +48,14 @@ w1<-TermDocumentMatrix(w1)     #Output in Table
 w1
 m1<-as.matrix(w1)
 m1
+
+m1<-sort(rowSums(m1),decreasing=TRUE)
+m1
+
+#Visualize by using wordmap
+#input as dataframe
+d<-data.frame(word=names(m1),freq=m1)
+d
+
+library(wordcloud)
+wordcloud(words=d$word,freq=d$freq,min.freq=3,max.words=500,random.order=FALSE,rot.per=0.35,colors=brewer.pal(8,"Dark2"))
