@@ -1,52 +1,36 @@
-imp<-readLines(file.choose())
-imp
+f<-read.csv(file.choose())
+f
 
-st<-Corpus(VectorSource(imp))
-st
+f1<-Corpus(VectorSource(f))
+f1
 
-library(tm)
-library(SnowballC)
-library(wordcloud)
-library(RColorBrewer)
-
-#Step2: Text Cleaning
-#Then Remove whitespaces,punctuations,numbers,stopwords,casesensitive
 stopwords("english")
-st<-tm_map(st,tolower)
-st<-tm_map(st,stripWhitespace)
-st<-tm_map(st,removePunctuation)
-st<-tm_map(st,removeNumbers)
-st<-tm_map(st,removeWords,stopwords("english"))
+f1<-tm_map(f1,tolower)
+f1<-tm_map(f1,stripWhitespace)
+f1<-tm_map(f1,removePunctuation)
+f1<-tm_map(f1,removeNumbers)
+f1<-tm_map(f1,removeWords,stopwords("english"))
 
-#Step3: Text Transformation - transform special characters by space
-space<-content_transformer(function(x,pattern)gsub(pattern," ",x))
-st<-tm_map(st,space,'?')
-st<-tm_map(st,space,',')
-st<-tm_map(st,space,'@')
-st<-tm_map(st,space,'.')
-st<-tm_map(st,space,'_')
-st<-tm_map(st,space,'/')
-st<-tm_map(st,space,'-')
-st<-tm_map(st,space,':')
+tospace<-content_transformer(function(x,pattern)gsub(pattern," ",x))
+f1<-tm_map(f1,tospace,'?')
+f1<-tm_map(f1,tospace,',')
+f1<-tm_map(f1,tospace,'@')
+f1<-tm_map(f1,tospace,'.')
+f1<-tm_map(f1,tospace,'_')
+f1<-tm_map(f1,tospace,'/')
 
-#Text Stemming: Stemming Words "moving","moved"
-st<-tm_map(st,stemDocument)
+f1<-tm_map(f1,stemDocument)
+f1<-Corpus(VectorSource(f))
 
-#Step4: Find Frequency
-st<-Corpus(VectorSource(imp))
-st
-st<-TermDocumentMatrix(st)     #Output in Table
-st
-m1<-as.matrix(st)
-m1
+f1<-TermDocumentMatrix(f1)
+f1
 
-m1<-sort(rowSums(m1),decreasing=TRUE)
-m1
-
-#Visualize by using wordmap
-#input as dataframe
-d<-data.frame(word=names(m1),freq=m1)
-d
+f2<-as.matrix(f1)
+f2<-sort(rowSums(f2),decreasing = TRUE)
+f2
+f3<-data.frame(word=names(f2),freq=f2)
+f3
 
 library(wordcloud)
-wordcloud(words=d$word,freq=d$freq,min.freq=3,max.words=500,random.order=FALSE,rot.per=0.35,colors=brewer.pal(8,"Dark2"))
+wordcloud(words=f3$word,freq = f3$freq,min.freq = 3,max.words = 500,random.order = FALSE,
+          rot.per = 0.35,colors = brewer.pal(8,"Dark2"))
